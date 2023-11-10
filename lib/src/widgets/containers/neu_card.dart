@@ -36,6 +36,7 @@ class NeuCard extends StatefulWidget {
     this.cardBorderColor = neuBlack,
     this.imageBorderColor = neuBlack,
     this.paddingData,
+    this.marginData,
     this.cardHeight,
     this.cardWidth,
     this.cardBorderWidth = neuBorder,
@@ -73,6 +74,9 @@ class NeuCard extends StatefulWidget {
 
   /// - paddingData (optional) : An EdgeInsetsGeometry that defines the padding for the contents of the card.
   final EdgeInsets? paddingData;
+
+  /// - marginData (optional) : An EdgeInsetsGeometry that defines the margin for the outside of the card.
+  final EdgeInsets? marginData;
 
   /// - cardHeight (optional) : A double that defines the height of the card.
   ///
@@ -139,6 +143,7 @@ class NeuCardState extends State<NeuCard> {
           color: widget.cardColor,
         ),
         padding: widget.paddingData,
+        margin: widget.marginData,
         child: widget.child);
   }
 }
